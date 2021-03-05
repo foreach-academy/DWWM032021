@@ -28,116 +28,116 @@ function afficheMenu() {
     console.log('\n')
 }
 
-// let quitter = false;
-// do {
+let quitter = false;
+do {
 
-//     afficheMenu();
-//     const elementMenu = readlineSync.question('?');
+    afficheMenu();
+    const elementMenu = readlineSync.question('?');
 
-//     switch (elementMenu) {
-//         case '1': {
-//             exercice1b();
-//             break;
-//         }
-//         case '2': {
-//             exercice2();
-//             break;
-//         }
-//         case '3': {
-//             exercice3();
-//             break;
-//         }
-//         case '3b': {
-//             exercice3b();
-//             break;
-//         }
-//         case '3c': {
-//             exercice3c();
-//             break;
-//         }
-//         case '3d': {
-//             exercice3d();
-//             break;
-//         }
-//         case '4': {
-//             exercice4();
-//             break;
-//         }
-//         case '5': {
-//             exercice5();
-//             break;
-//         }
-//         case '6': {
-//             exercice6();
-//             break;
-//         }
-//         case '7': {
-//             exercice7();
-//             break;
-//         }
-//         case '8': {
-//             exercice8();
-//             break;
-//         }
-//         case '9': {
-//             exercice9();
-//             break;
-//         }
-//         case '10': {
-//             exercice10();
-//             break;
-//         }
-//         case '11': {
-//             exercice11();
-//             break;
-//         }
-//         case '11b': {
-//             exercice11b();
-//             break;
-//         }
-//         case '12': {
-//             exercice12();
-//             break;
-//         }
-//         case '13': {
-//             exercice13();
-//             break;
-//         }
-//         case '14': {
-//             exercice14();
-//             break;
-//         }
-//         case '15': {
-//             exercice15();
-//             break;
-//         }
-//         case '16': {
-//             exercice16();
-//             break;
-//         }
-//         case '17': {
-//             exercice17();
-//             break;
-//         }
-//         case '18': {
-//             exercice18();
-//             break;
-//         }
-//         case '19': {
-//             exercice19();
-//             break;
-//         }
-//         case '0': {
-//             quitter = true;
-//             break;
-//         }
-//         default: {
-//             console.log("votre saisie ne correspond pas au menu");
-//             break;
-//         }
-//     }
-// }
-// while (!quitter);
+    switch (elementMenu) {
+        case '1': {
+            exercice1b();
+            break;
+        }
+        case '2': {
+            exercice2();
+            break;
+        }
+        case '3': {
+            exercice3();
+            break;
+        }
+        case '3b': {
+            exercice3b();
+            break;
+        }
+        case '3c': {
+            exercice3c();
+            break;
+        }
+        case '3d': {
+            exercice3d();
+            break;
+        }
+        case '4': {
+            exercice4();
+            break;
+        }
+        case '5': {
+            exercice5();
+            break;
+        }
+        case '6': {
+            exercice6();
+            break;
+        }
+        case '7': {
+            exercice7();
+            break;
+        }
+        case '8': {
+            exercice8();
+            break;
+        }
+        case '9': {
+            exercice9();
+            break;
+        }
+        case '10': {
+            exercice10();
+            break;
+        }
+        case '11': {
+            exercice11();
+            break;
+        }
+        case '11b': {
+            exercice11b();
+            break;
+        }
+        case '12': {
+            exercice12();
+            break;
+        }
+        case '13': {
+            exercice13();
+            break;
+        }
+        case '14': {
+            exercice14();
+            break;
+        }
+        case '15': {
+            exercice15();
+            break;
+        }
+        case '16': {
+            exercice16();
+            break;
+        }
+        case '17': {
+            exercice17();
+            break;
+        }
+        case '18': {
+            exercice18();
+            break;
+        }
+        case '19': {
+            exercice19();
+            break;
+        }
+        case '0': {
+            quitter = true;
+            break;
+        }
+        default: {
+            console.log("votre saisie ne correspond pas au menu");
+            break;
+        }
+    }
+}
+while (!quitter);
 
 
 //Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs numériques en les mettant toutes à zéro.
@@ -514,7 +514,7 @@ function exercice14() {
 // Le programme décide d'un nombre aléatoire entre 1 et 50 et essaie ensuite de deviner ce nombre. 
 // On affiche alors le nombre de tentative qu'il a fallu et les nombre qui ont été testé avant de trouver la solution.
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));    
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
 function getRandom(min, max) {
@@ -629,7 +629,7 @@ function test(randomNumber) {
             if (avantDernier === 0) {
                 avantDernier = 50
             }
-            choix = choix + milieuDuTableau(choix, avantDernier) 
+            choix = choix + milieuDuTableau(choix, avantDernier)
             avantDernier = temp
         } else if (randomNumber < choix) {
             let temp = choix
@@ -701,21 +701,36 @@ function exercice6() {
 // soit la suite : 5, 10, 15, 20 ...
 // Ecrire un algorithme qui permet de déterminer les 10 premières valeurs de cette suite et affichez les valeurs.
 function exercice7() {
+    const result = []
+    for (let i = 0; i < 10; i++) {
+        result[i] = i * 5 + 5;
+    }
 
+    console.log(result)
 }
 
 
 // soit la suite : 3, 8, 13, 18 ...
 // Ecrire un algorithme qui permet de déterminer les 10 premières valeurs de cette suite et affichez les valeurs.
 function exercice8() {
+    const result = [3]
+    for (let i = 1; i < 9; i++) {
+        result[i] = result[i-1] + 5;
+    }
 
+    console.log(result)
 }
 
 
 // Soit la suite de Fibonacci définie comme ceci : U(n) = U(n-1) + U(n-2) avec U(0) = 0 et U(1) = 1.
 // Ecrire un algorithme qui permettra de déterminer les 6 valeurs suivantes de la suite et affichez les valeurs
 function exercice9() {
+    const result = [0,1]
+    for (let i = 2; i < 8; i++) {
+        result[i] = result[i-1] + result[i-2];
+    }
 
+    console.log(result)
 }
 
 // Ecrivez un algorithme constituant un tableau, à partir de deux tableaux de même longueur préalablement saisis. Le nouveau tableau sera la somme des éléments des deux tableaux de départ.
@@ -725,8 +740,8 @@ function exercice9() {
 function exercice17() {
 
     // Definir deux tableaux
-    const tableau1 = [4,8,7,9,1,5,4,6]
-    const tableau2 = [7,6,5,2,1,3,7,4]
+    const tableau1 = [4, 8, 7, 9, 1, 5, 4, 6]
+    const tableau2 = [7, 6, 5, 2, 1, 3, 7, 4]
 
     let result = []
 
@@ -737,9 +752,9 @@ function exercice17() {
     }
 
     // parcourir les tableaux
-    for(let i = 0; i< tableau1.length; i++) {
+    for (let i = 0; i < tableau1.length; i++) {
         // Additionner les elements au meme index
-        result[i]= tableau1[i] + tableau2[i]
+        result[i] = tableau1[i] + tableau2[i]
     }
 
     //Afficher le resultat
@@ -753,14 +768,14 @@ function exercice17() {
 function exercice18() {
 
     // Definir les deux tableaux
-    const tableau1 = [4,8,7,12]
-    const tableau2 = [3,6]
+    const tableau1 = [4, 8, 7, 12]
+    const tableau2 = [3, 6]
     let result = 0
 
     // Parcourir le premier tableau (tableau1)
-    for(let i = 0; i < tableau1.length; i++) {
+    for (let i = 0; i < tableau1.length; i++) {
         //Parcourir le second tableau (tableau2)
-        for(let j = 0; j < tableau2.length; j++){
+        for (let j = 0; j < tableau2.length; j++) {
             // multiplier les 2 elements et les additionner au resultat
             result = result + tableau1[i] * tableau2[j]
         }
@@ -776,7 +791,7 @@ function exercice18() {
 // b. Faite de meme avec la course suivant : [ 'Yoshi', 6, 'Toad', 3, 'Peach', 2, 'Bowser', 5, 'Mario', 4, 'Luigi', 1];
 // c. Calculer le vainqueur si on considère les 2 courses
 
-function calculPointCourse(course,resultat) {
+function calculPointCourse(course, resultat) {
     const points = [6, 4, 3, 2, 1, 0];
 
     for (let indexCourse = 0; indexCourse < course.length; indexCourse += 2) {
@@ -785,49 +800,30 @@ function calculPointCourse(course,resultat) {
         const placeDansLaCourse = course[indexCourse + 1]; // 6
         // Aller chercher le nombre de points correspondant dans le tableau points (valeur dans le tableau points à placeDansLaCourse - 1)
         const nbPoints = points[placeDansLaCourse - 1]; // 0
-        
+
         // Ajouter les points au tableau résultats
-        for(let indexResultat = 0; indexResultat < resultat.length; indexResultat +=2) {
-            if(resultat[indexResultat] === nomDuCoureur){
+        for (let indexResultat = 0; indexResultat < resultat.length; indexResultat += 2) {
+            if (resultat[indexResultat] === nomDuCoureur) {
                 resultat[indexResultat + 1] = resultat[indexResultat + 1] + nbPoints;
             }
         }
     }
 }
 
-function testMario() {
+function exercice19() {
 
     // Definir un tableau avec le resultat de la course1
     // Definir un tableau avec le resultat de la course2
-    const resultat = ['Yoshi', 0, 'Toad', 0, 'Peach', 0, 'Bowser', 0, 'Mario', 0, 'Luigi', 0]; 
-    
-    const course =   ['Yoshi', 1, 'Toad', 2, 'Peach', 3, 'Bowser', 4, 'Mario', 5, 'Luigi', 6];
-    const course2 =  ['Yoshi', 6, 'Toad', 3, 'Peach', 2, 'Bowser', 5, 'Mario', 4, 'Luigi', 1];
-    const course3 =  ['Toad', 6, 'Yoshi', 3, 'Luigi', 2, 'Bowser', 5, 'Mario', 4, 'Peach', 1];
-    // Definir le tableau de reference des points
-    
-    // Definir un tableau avec le classement general
-    calculPointCourse(course,resultat);
-    calculPointCourse(course2,resultat);
-    calculPointCourse(course3,resultat);
+    const resultat = ['Yoshi', 0, 'Toad', 0, 'Peach', 0, 'Bowser', 0, 'Mario', 0, 'Luigi', 0];
 
-    
+    const course = ['Yoshi', 1, 'Toad', 2, 'Peach', 3, 'Bowser', 4, 'Mario', 5, 'Luigi', 6];
+    const course2 = ['Yoshi', 6, 'Toad', 3, 'Peach', 2, 'Bowser', 5, 'Mario', 4, 'Luigi', 1];
+    const course3 = ['Toad', 6, 'Yoshi', 3, 'Luigi', 2, 'Bowser', 5, 'Mario', 4, 'Peach', 1];
 
-    // Parcourir le tableau de la course1, en augmentant de 2 l'index (indexCourse) pour chaque tour (ex: 0 => 'Yoshi', 2 => 'Toad')
-        // pour chaque participant, trouver sa place en utilisant l'index(indexCourse) + 1
-        // a partir de la place trouver le nombre de points, valeur de la place correspond a index (indexPoint) dans le tableeau de point
-        // Trouver le participant dans le classement general en comparant les noms et en augmentant dee 2 l'index (indexClassement) a chaque tour
-        // Augmenter le total des point du participant en utilisant index (indexClassement) + 1
-        
-    // Recommencer pour la course 2
-
-    // Afficher le resultat
+    calculPointCourse(course, resultat);
+    calculPointCourse(course2, resultat);
+    calculPointCourse(course3, resultat);
 
     console.log(resultat);
-    // Parcourir le tableau course en augmentant de 2 l'index (indexCourse) à chaque tour
-    // ex : 'yoshi'= index 0     place yoshi = index 1
-    // ex : 'mario'= index 8     place mario = index 9
-    
-}
 
-//testMario();
+}
