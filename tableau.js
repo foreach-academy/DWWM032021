@@ -514,8 +514,14 @@ function exercice14() {
 // Le programme décide d'un nombre aléatoire entre 1 et 50 et essaie ensuite de deviner ce nombre. 
 // On affiche alors le nombre de tentative qu'il a fallu et les nombre qui ont été testé avant de trouver la solution.
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max));    
 }
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandom(23, 46))
 
 function displayPetitGrand(random, expected) {
     if (random > expected) {
@@ -824,4 +830,4 @@ function testMario() {
     
 }
 
-testMario();
+//testMario();
